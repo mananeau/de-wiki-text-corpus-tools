@@ -2,7 +2,7 @@ from somajo import Tokenizer, SentenceSplitter
 import os
 from multiprocessing import Pool, cpu_count
 
-PROCESS_DISCUSSION = True
+PROCESS_DISCUSSION = False
 
 
 def get_args_from_command_line():
