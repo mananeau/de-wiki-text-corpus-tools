@@ -2,7 +2,7 @@ from somajo import Tokenizer, SentenceSplitter
 import os
 from multiprocessing import Pool, cpu_count
 
-PROCESS_DISCUSSION = False
+PROCESS_DISCUSSION = True
 
 
 def get_args_from_command_line():
@@ -49,9 +49,9 @@ def process_text_line(line):
     tokenizer = Tokenizer()
     tokens = tokenizer.tokenize(line)
 
-    sentence_splitter = SentenceSplitter()
-    sentences = sentence_splitter.split(tokens)
-
+    #sentence_splitter = SentenceSplitter()
+    #sentences = sentence_splitter.split(tokens)
+    sentences = tokens
     result = []
 
     for s in sentences:
